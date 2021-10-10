@@ -73,9 +73,8 @@ public class danhsachSanPham {
          }else{
              System.out.println("sản phẩm không có trong danh sách");
          }
-         
      }
-     //phương thức tính giá trung bình 
+            //phương thức tính giá trung bình 
          public void tinhtrungbinh(){
             //khai báo avg
             double avg = 0, sum = 0;
