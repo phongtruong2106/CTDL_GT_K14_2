@@ -9,10 +9,10 @@ import java.util.Scanner;
 public class danhsachSV {
     //khai báo đối tượng Arraylist
     private ArrayList<SVDV> list = new ArrayList<>();
+    static Scanner scanner = new Scanner(System.in);
     //phương thức nhập
     public void nhap(){
         System.out.println("nhập sinh viên: ");
-        Scanner scanner = new Scanner(System.in);
         //dùng biến i kiểm tra và hiển thị
         int i = 1;
         //dùng vòng lặp do while
@@ -53,15 +53,14 @@ public class danhsachSV {
     }
     //phương thức tìm kiếm
     public void timkiem(){
-        Scanner sc = new Scanner(System.in);
         System.out.println("nhập tên sinh viên cần tìm: ");
-        String ten = sc.nextLine();
+        String ten = scanner.nextLine();
         String a[] = new String[100];
-        int n = sc.nextInt();
-        sc.nextLine();
+        int n = scanner.nextInt();
+        scanner.nextLine();
         
 		for (int i = 0; i < n; i++) {
-			a[i] = sc.nextLine();
+			a[i] = scanner.nextLine();
 
 		}
 		for (int i = 0; i < n; i++) {
@@ -78,7 +77,6 @@ public class danhsachSV {
     }
     //phương thức tìm và xóa họ tên
     public void timxoa(){
-        Scanner scanner = new Scanner(System.in);
         System.out.println("nhập tên cần tìm và xóa: ");
         String ten = scanner.nextLine();
         SVDV found = null;
@@ -95,6 +93,22 @@ public class danhsachSV {
             System.out.println("họ và tên vừa ghi không cóa trên danh sách! thử lại??");
             
         }
+    } 
+        //phương thức tìm và sửa
+        public void timsua() {
+            System.out.println("nhập tên cần tìm và sửa: ");
+            String ten = scanner.nextLine();
+            SVDV found = null;
+             
+            for(SVDV svdv : list){
+                if(svdv.getten().equals(ten)){
+                    found =svdv;
+                }
+            }
+     if(found != null){
+    
+    }
+   
     }
     //phương thức menu
     public void menu(){
