@@ -5,37 +5,35 @@ import java.util.Scanner;
 
 public class lap3bai3 {
     public static void main(String[] args) {
-        int mang[] = new int[5]; //cấp phát cái mảng có tham số
+        Scanner sc = new Scanner(System.in);
+        System.out.print("nhập số phần tử muốn nhập: ");   
+        int n = sc.nextInt();
+        int mang[] = new int[n];
 
-        //nhập dữ liệu từ bàn phím
-        Scanner scanner = new Scanner(System.in);
         //dùng vòng lặp for
         for(int i = 0; i < mang.length; i++){
-            System.out.println("nhập phần tử thứ  " + (i + 1));
-            mang[i] = scanner.nextInt();
+            System.out.println("nhập phần tử mảng thứ : " + (i+1));
+            mang[i] = sc.nextInt();
         }
-        System.out.println("phần tử mảng: " + Arrays.toString(mang));
-        
-        //sắp xếp mảng
+        //săp xếp
         Arrays.sort(mang);
-      
-        System.out.println("phần tử sau khi sắp xếp: " + Arrays.toString(mang));
-        //phần tử nhỏ nhất
-        int min = mang[0];
-        for(int i = 1; i < mang.length; i++){
-            min = Math.min(min, mang[i]); 
-            System.out.println("phần tử nhỏ nhất: " + min);
+        System.out.println("phần tử sau khi sắp xếp" + Arrays.toString(mang)); //Arrays.tostring xuất phần tử
+        //xuất phần tử nhỏ nhất 
+        int Min = mang[0];
+        //dùng vòng lặp for each
+        for(int x : mang){
+                Math.min(Min, x);
         }
-
-        //tính trung bình , tổng
-        int sum = 0, count = 0;
-        for(int i = 0; i < mang.length; i++){
+        System.out.println("phần tử nhỏ nhất: " + Min);
+        //tính và xuất
+        int sum = 0, count =0;
+        for(int i = 0; i < mang.length ; i++){
             if(mang[i] % 3 == 0){
                 sum += mang[i];
                 count++;
             }
+        float t = (float) sum/count;
+        System.out.println("giá trung bình: " + t);
         }
-        float avg = (float) sum /count;
-        System.out.println("giá trị trung bình:" + avg);
     }
 }
