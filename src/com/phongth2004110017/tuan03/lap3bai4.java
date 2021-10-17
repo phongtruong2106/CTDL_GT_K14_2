@@ -3,47 +3,45 @@ package com.phongth2004110017.tuan03;
 import java.util.Scanner;
 
 public class lap3bai4 {
-    private static Scanner input;
     public static void main(String[] args) {
-        input = new Scanner(System.in);
-        System.out.print("Nhap so luong sinh vien = ");
-        int n=input.nextInt();
-        String[] A=new String[n];
+        Scanner sc =new Scanner(System.in);
+        System.out.println("nhập số lượng sinh viên muốn nhập: ");
+        int n = sc.nextInt();
+        String[] ten =new String[n];
+
+        //nhập tên sinh viên
+        for(int i = 0; i< ten.length; i++){
+             System.out.println("nhập thông tin sinh viên thứ " + (i +1));
+             System.out.print("họ và tên: ");
+             ten[i] = sc.nextLine();
+             sc.nextLine();
+            }
+       //nhập điểm
+       double diem[] = new double[n];
+       for(int i = 0 ; i< diem.length; i++){
+           System.out.println("nhập thông tin sinh viên thứ " + (i+1));
+           System.out.println("nhập điểm: ");
+           diem[i] = sc.nextDouble();
+       }
+       //xét học lực
+       for(int i =0; i<n ; i++){
+        if(diem[i] >= 5 && diem[i] < 6.5){
+            System.out.printf("\nSinh viên thứ %d: ", i+1);
+            System.out.printf("%s | %f => học lực trung bình", ten[i], diem[i]);
+        } else
+        if(diem[i] >= 7.5 && diem[i] <9){
+            System.out.printf("\nSinh viên thứ %d: ", i+1);
+            System.out.printf("%s | %f => học lực khá", ten[i], diem[i]);
+        } else
+        if(diem[i] >= 9){
+            System.out.printf("\nSinh viên thứ %d: ", i+1);
+            System.out.printf("%s | %f => học lực giỏi", ten[i], diem[i]);
+        } else {
+            System.out.printf("\nSinh viên thứ %d: ", i+1);
+            System.out.printf("%s | %f => học lực yếu", ten[i], diem[i]);
+        }
         
-        for(int i=0;i<n;i++) {
-            System.out.println("- Nhap thong tin sinh vien thu "+i+" : ");
-            System.out.print("Ho ten sv: ");
-            input.nextLine();
-            A[i]=input.nextLine();
-            
         }
-        int B[]=new int[n];
-        for(int i=0;i<n;i++) {
-            System.out.println("- Nhap thong tin sinh vien thu "+i+" : ");
-            System.out.print("Diem : ");
-            B[i]=input.nextInt();
-        }
-        for(int i=0;i<n;i++) {
-            if(B[i]<5) {
-                System.out.println("Ten : "+A[i]+"\n Diem: "+B[i]+"\nHoc Luc: yeu");
-            }
-            if(B[i]<5 && B[i]<6.5) {
-
-                System.out.println("Ten : "+A[i]+"\n Diem: "+B[i]+"\nHoc Luc: trung binh");
-            }
-            if(B[i]<=6.5 && B[i]<7.5) {
-
-                System.out.println("Ten : "+A[i]+"\n Diem: "+B[i]+"\nHoc Luc: kha");
-            }
-            if(B[i]<=7.5 && B[i]<9) {
-
-                System.out.println("Ten : "+A[i]+"\n Diem: "+B[i]+"\nHoc Luc: gioi");
-            }
-            if(B[i ]>=9) {
-
-                System.out.println("Ten : "+A[i]+"\n Diem: "+B[i]+"\nHoc Luc: xuat sac");
-            }
-        }
-            
+           sc.close(); 
         }
 }
