@@ -5,11 +5,12 @@ public class SanPham {
     Double gia;
     Double giamgia;
     Double thue;
+    
 
- SanPham(){
+  public SanPham(){
 
     }
-  SanPham(String t, Double g, Double gg, Double th){
+public SanPham(String t, Double g, Double gg, Double th){
         ten = t;
         gia = g;
         giamgia = gg;
