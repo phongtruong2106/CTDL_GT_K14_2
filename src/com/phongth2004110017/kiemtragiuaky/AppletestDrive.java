@@ -52,9 +52,6 @@ public class AppletestDrive {
            if(sc.nextLine().equals("n"))
            break;
        }
-       xuat();
-       sc.nextLine();
-       menu();
    }
    //phương thức hiển thị
    static void xuat(){
