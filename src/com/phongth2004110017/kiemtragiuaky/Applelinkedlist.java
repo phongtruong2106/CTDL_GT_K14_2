@@ -5,21 +5,6 @@ public class Applelinkedlist {
     Applel tail = null;
 
     public Applelinkedlist(){}
-    
-    //xây dựng thêm hàm
-    void add(int ID, int khoiluong, String color){
-        //tạo 1 note mới
-        Applel newApplel = new Applel(ID, khoiluong, color, newApplel);
-
-
-        if(head == null){//thêm nút vào danh sách rỗng
-            head = newApplel;
-            tail = newApplel;
-        }else{//ds không rỗng //thêm đuôi vào danh sách
-            tail.next = newApplel;
-            tail = newApplel;
-        }
-    }
 
     void remve(){
 
@@ -95,4 +80,5 @@ public class Applelinkedlist {
             temp = temp.next ;
         }
     
+}
 }
