@@ -43,18 +43,56 @@ public class Applelinkedlist {
     void find(){
 
     }
-     //chèn thêm node mới vào phần đầu của ds
-    void push(int new_data) {
-        Object new_ID_;
-    /* Cấp phát bộ nhớ cho node mới
-           Truyền giá trị vào cho node mới*/
-    Applel newApplel = new Applel(new_data); 
-  
-    /*  Làm cho node tiếp theo của node mới trở thành node head
-     (tức là làm cho con trỏ next của node mới trỏ đến node head) */
-    newApplel.next = head; 
-  
-    /* 4. Làm cho node head trỏ đến node mới */
-    head = newApplel; 
+    void clearAll(){
+        head = tail = null ;
     }
+
+    void addt (int ID, int khoiluong, String color){
+        // Tạo 1 Node mới 
+        Applel newApplel = new Applel(ID, khoiluong, color);
+        // Kiểm tra xem danh sách 
+        if(head == null ){// thêm 1 nút vào dánh sách rỗng
+            // Nếu danh sách rỗng thì cả head và tail đều trỏ tới newNode
+            head = newApplel ;
+            tail = newApplel ;
+        }else { // danh sách không rỗng
+            // newNode sẽ được thêm và sau tail
+            // THÀNH PHẦN LIÊN KẾT CỦA TAIL SẼ LIÊN KÉT ĐẾN
+              tail.next = newApplel ;
+            // newNode sẽ trở thành tail mới.
+              tail = newApplel ;
+        }
+    }
+
+     //chèn thêm node mới vào phần đầu của ds
+    void addFirst (int ID, int khoiluong, String color){
+         // Tạo 1 Node mới 
+         Applel newNode = new Applel(ID ,khoiluong, color);
+         // Kiểm tra xem danh sách 
+         if(head == null ){// thêm 1 nút vào dánh sách rỗng
+             // Nếu danh sách rỗng thì cả head và tail đều trỏ tới newNode
+             head = newNode ;
+             tail = newNode ;
+         }else { // danh sách không rỗng
+             // newNode sẽ được thêm và head
+             // THÀNH PHẦN LIÊN KẾT CỦA TAIL SẼ LIÊN KÉT ĐẾN
+               newNode.next = head  ;
+             // newNode sẽ trở thành head mới.
+               head = newNode ;
+         }
+    }
+    void removeHead (){
+        head = head.next ;
+    }
+    void removeTail(){
+        Applel temp = head ;
+        while(temp != null){
+            if(temp.next ==tail){
+                temp.next=null ;
+                tail = temp ;
+                break ;
+            }
+            temp = temp.next ;
+        }
+    
 }
