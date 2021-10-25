@@ -15,6 +15,6 @@ public class MylinklistTestDrive {
     mylinklists.print();
     }
     //xóa phần tử đầu
-
+    
 
 }
