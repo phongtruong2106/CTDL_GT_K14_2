@@ -22,18 +22,6 @@ public class Applel {
         color = c;
         next = n;
     }
-    Scanner sc = new Scanner(System.in);
-
-    void nhapthongtin(){
-      
-        System.out.print("nhập mã ID: ");
-        ID = sc.nextInt();
-        System.out.print("nhập khối lượng: ");
-        khoiluong = sc.nextInt();
-        System.out.print("nhập màu: ");
-        color = sc.nextLine();
-        sc.nextLine();
-    }
 
     void inthongtin(){
         System.out.println("mã ID: " + ID);
