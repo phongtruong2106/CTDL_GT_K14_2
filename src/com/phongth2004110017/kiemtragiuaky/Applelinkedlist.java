@@ -1,22 +1,23 @@
 package com.phongth2004110017.kiemtragiuaky;
 
 public class Applelinkedlist {
-    Nodea head = null;
-    Nodea tail = null;
+    Applel head = null;
+    Applel tail = null;
 
     public Applelinkedlist(){}
     
     //xây dựng thêm hàm
-    void add(int data){
+    void add(int ID, int khoiluong, String color){
         //tạo 1 note mới
-        Nodea newNode = new Nodea(data);
+        Applel newApplel = new Applel(ID, khoiluong, color, newApplel);
+
 
         if(head == null){//thêm nút vào danh sách rỗng
-            head = newNode;
-            tail = newNode;
+            head = newApplel;
+            tail = newApplel;
         }else{//ds không rỗng //thêm đuôi vào danh sách
-            tail.next = newNode;
-            tail = newNode;
+            tail.next = newApplel;
+            tail = newApplel;
         }
     }
 
@@ -24,7 +25,7 @@ public class Applelinkedlist {
 
     }
     void print(){
-         Nodea cur =head;
+         Applel cur =head;
 
          if(head==null){
              System.out.println("danh sách rỗng");
@@ -32,7 +33,10 @@ public class Applelinkedlist {
          }
          System.out.println("các nút trong danh sách");
          while(cur != null){
-             System.out.println(cur.data);
+             System.out.println(cur.ID);
+             System.out.println(cur.khoiluong);
+             System.out.println(cur.color);
+
              cur = cur.next; //liên kết phần tử tiếp theo
          }
     }
@@ -41,15 +45,16 @@ public class Applelinkedlist {
     }
      //chèn thêm node mới vào phần đầu của ds
     void push(int new_data) {
-        /* Cấp phát bộ nhớ cho node mới
+        Object new_ID_;
+    /* Cấp phát bộ nhớ cho node mới
            Truyền giá trị vào cho node mới*/
-    Nodea newNode = new Nodea(new_data); 
+    Applel newApplel = new Applel(new_data); 
   
     /*  Làm cho node tiếp theo của node mới trở thành node head
      (tức là làm cho con trỏ next của node mới trỏ đến node head) */
-    newNode.next = head; 
+    newApplel.next = head; 
   
     /* 4. Làm cho node head trỏ đến node mới */
-    head = newNode; 
+    head = newApplel; 
     }
 }
