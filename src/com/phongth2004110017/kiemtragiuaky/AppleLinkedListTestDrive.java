@@ -14,6 +14,8 @@ public class AppleLinkedListTestDrive {
         //thêm phần tử
          System.out.println("danh sách đc thêm");
          applelinkedlist.addFirst(777, 10, xanh dam);
+
+         //
     }
 
 }
