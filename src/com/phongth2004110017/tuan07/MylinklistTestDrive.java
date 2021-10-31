@@ -13,8 +13,19 @@ public class MylinklistTestDrive {
     System.out.println("danh sách dc thêm");
     mylinklists.push(7);
     mylinklists.print();
-    }
     //xóa phần tử đầu
+
+    System.out.println("xóa phần tử");
+    mylinklists.removeHead();
+    mylinklists.print();
+
+    //xóa phần tử cuối 
+
+    System.out.println("danh sách còn lại");
+    mylinklists.removeTail();
+    mylinklists.print();
+    }
+    
     
 
 }
