@@ -21,4 +21,19 @@ public class BinaryTree {
     public void add(int value) {
         root = addRecursive(root, value);
     }
+    //tìm kiếm 1 phần tử
+    private boolean containsNodeRecursive(Node current, int value) {
+        if (current == null) {
+            return false;
+        } 
+        if (value == current.value) {
+            return true;
+        } 
+        return value < current.value
+          ? containsNodeRecursive(current.left, value)
+          : containsNodeRecursive(current.right, value);
+    }
+    public boolean containsNode(int value) {
+        return containsNodeRecursive(root, value);
+    }
 }
