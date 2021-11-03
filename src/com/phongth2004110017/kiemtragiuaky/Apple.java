@@ -7,7 +7,7 @@ public class Apple {
     int khoiluong;
     String color;
     
-    Apple(){};
+    public Apple(){};
     
     Apple(int i, int k, String c){
         ID = i;
@@ -16,7 +16,7 @@ public class Apple {
     }
     Scanner sc = new Scanner(System.in);
 
-    void nhapthongtin(){
+    public void nhapthongtin(){
       
         System.out.print("nhập mã ID: ");
         ID = sc.nextInt();

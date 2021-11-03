@@ -1,5 +1,8 @@
 package com.phongth2004110017.tuan08;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinaryTree {
     Node root;
     private Node addRecursive(Node current, int value) {
@@ -21,7 +24,42 @@ public class BinaryTree {
     public void add(int value) {
         root = addRecursive(root, value);
     }
-    //tìm kiếm 1 phần tử
+
+    public static BinaryTree createBinaryTree() {
+
+        BinaryTree bt = new BinaryTree();
+
+        bt.add(6);
+        bt.add(4);
+        bt.add(8);
+        bt.add(3);
+        bt.add(5);
+        bt.add(7);
+        bt.add(9);
+
+        return bt;
+    }
+    public static void breadthFirst(Node node){
+        if(node == null){
+            System.out.println("Empty Tree");
+            return;
+        }
+
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(node);
+        while(!queue.isEmpty()){
+            Node current = queue.poll();
+            System.out.println(current.value);
+            if(current.left !=null) {
+                queue.add(current.left);
+            }
+
+            if(current.right !=null) {
+                queue.add(current.right);
+            }
+        }
+    }
+    //tìm 1 phần tử
     private boolean containsNodeRecursive(Node current, int value) {
         if (current == null) {
             return false;
