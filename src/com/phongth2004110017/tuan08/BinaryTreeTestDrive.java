@@ -6,7 +6,7 @@ public class BinaryTreeTestDrive {
           
            BinaryTree.breadthFirst(binaryTree.root);
 
-           assertTrue(binaryTree.containsNode(6));
+           
       }
 
 }
