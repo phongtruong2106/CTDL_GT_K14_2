@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class AppleLinkedList {
     Node head = null;
     Node tail = null;
+    Node current = null;
 
     static Node list = new Node();
     Scanner sc = new Scanner(System.in);
@@ -42,6 +43,7 @@ public class AppleLinkedList {
             System.out.println("Các biến là:  ");
             while (current != null) {
                 System.out.println(current.data);
+                current.inThongTinApple();
                 current = current.next;
             }
         }
