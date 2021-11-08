@@ -1,4 +1,4 @@
-package Apple;
+package com.phongth2004110017.kiemtragiuaky;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -11,7 +11,7 @@ public class KhoApple {
         while(true){
 
             Apple apple = new Apple();
-            apple.nhapThongTinApple();
+            apple.nhapthongtin();
             
             bienNhap.nextLine();
             dsApple.add(apple);
@@ -24,7 +24,7 @@ public class KhoApple {
     
     public void xuatDanhSach(){
         for(Apple apple: dsApple){
-            apple.inThongTinApple();
+            apple.inthongtin();
         }
     }
 
@@ -32,7 +32,7 @@ public class KhoApple {
         System.out.println("Màu cần tìm là: ");
         for(Apple apple: dsApple){
             if(bienNhap.nextLine().equals(apple.color))
-            apple.inThongTinApple();
+            apple.inthongtin();
         }
     }
 }

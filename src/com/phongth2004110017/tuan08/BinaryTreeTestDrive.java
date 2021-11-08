@@ -14,7 +14,7 @@ public class BinaryTreeTestDrive {
         System.out.println(" \n Duyệt theo thứ tự sau truy cập vào cây con bên trái, cây con bên phải và nút gốc ở cuối");
         BinaryTree.traversePostOrder(binaryTree.root);
 
-   
+        
     }
 
 }

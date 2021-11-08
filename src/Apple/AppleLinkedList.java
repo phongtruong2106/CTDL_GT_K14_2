@@ -7,18 +7,19 @@ public class AppleLinkedList {
     Node tail = null;
     Node current = null;
 
-    static Node list = new Node();
-    Scanner sc = new Scanner(System.in);
+    public AppleLinkedList(){}
 
-    public void addHead() {
-        Node newNode = new Node();
-        newNode.nhapThongTin();
-        if (head == null) {
-            head = newNode;
-            tail = newNode;
-        } else {
-            newNode.next = head;
-            head = newNode;
+    boolean isEmpty(){
+        boolean emtpy = true;
+        if(head == null){
+            return true;
+        }else{
+        emtpy = false;}
+        return emtpy;
+    }
+    public void addHead(Apple apple) {
+        if(isEmpty()){
+            head = apple;
         }
     }
 

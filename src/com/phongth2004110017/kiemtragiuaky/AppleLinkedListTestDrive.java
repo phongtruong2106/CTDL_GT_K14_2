@@ -4,18 +4,36 @@ import java.util.Scanner;
 
 public class AppleLinkedListTestDrive {
     public static void main(String[] args) {
-        Applelinkedlist applelinkedlist = new Applelinkedlist();
-        System.out.println("===================");
-        applelinkedlist.add(2222, 3, đo);
-        applelinkedlist.add(333, 5, nâu);
-        applelinkedlist.add(6666, 8, xanh);
-        
-        applelinkedlist.print();
-        //thêm phần tử
-         System.out.println("danh sách đc thêm");
-         applelinkedlist.addFirst(777, 10, xanh dam);
+         Applelinkedlist linkedList = new Applelinkedlist();
+    Scanner sc = new Scanner(System.in);
 
-         //
-    }
+    do {
+        System.out.println("==========================");
+        System.out.println("1) Add head  ");
+        System.out.println("2) Add Tail  ");
+        System.out.println("3) in danh sách ");
+        System.out.println("4) kết thức ");
 
+        System.out.print("chọn chức năng: ");
+        int choice = sc.nextInt();
+        switch (choice) {
+
+        case 1:
+            linkedList.addHead();
+            break;
+        case 2:
+            linkedList.addTail();
+            break;
+        case 3:
+            linkedList.inDanhSach();
+            break;
+        case 4:
+            System.exit(0);
+            break;
+        }
+    } while (true);
 }
+    }
+   
+
+

@@ -15,6 +15,8 @@ public class Apple {
         color = c;
     }
     Scanner sc = new Scanner(System.in);
+    public Apple next;
+    public char[] data;
 
     public void nhapthongtin(){
       

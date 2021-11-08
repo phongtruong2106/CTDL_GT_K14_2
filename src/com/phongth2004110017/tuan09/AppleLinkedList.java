@@ -1,18 +1,18 @@
-package com.phongth2004110017.kiemtragiuaky;
+package com.phongth2004110017.tuan09;
 
 import java.util.Scanner;
 
-public class Applelinkedlist {
-    Apple head = null;
-    Apple tail = null;
-    Apple current = null;
+public class AppleLinkedList {
+    Node head = null;
+    Node tail = null;
+    Node current = null;
 
-    static Apple list = new Apple();
+    static Node list = new Node();
     Scanner sc = new Scanner(System.in);
 
     public void addHead() {
-        Apple newNode = new Apple();
-        newNode.nhapthongtin();
+        Node newNode = new Node();
+        newNode.nhapThongTin();
         if (head == null) {
             head = newNode;
             tail = newNode;
@@ -23,8 +23,8 @@ public class Applelinkedlist {
     }
 
     public void addTail() {
-        Apple newNode = new Apple();
-        newNode.nhapthongtin();
+        Node newNode = new Node();
+        newNode.nhapThongTin();
         if (head == null) {
             head = newNode;
             tail = newNode;
@@ -35,7 +35,7 @@ public class Applelinkedlist {
     }
 
     public void inDanhSach() {
-        Apple current = head;
+        Node current = head;
 
         if (head == null) {
             System.out.println("Trống");
@@ -43,14 +43,14 @@ public class Applelinkedlist {
             System.out.println("Các biến là:  ");
             while (current != null) {
                 System.out.println(current.data);
-                current.inthongtin();
+                current.inThongTinApple();
                 current = current.next;
             }
         }
     }
 
     public void removeTail() {
-        Apple tam = head;
+        Node tam = head;
         if (head == null) {
             System.out.println("Trống");
             return;
@@ -64,4 +64,5 @@ public class Applelinkedlist {
             tam = tam.next;
         }
     }
+
 }
