@@ -10,105 +10,115 @@ public class BookLinkedList {
     Book previous;
     Book current;
     Scanner sc = new Scanner(System.in);
-    public BookLinkedList(){}
 
-   Book nhapThongTin(){
-       System.out.println("nhập sách: ");
-       sc.nextLine();
-       String sach = sc.nextLine();
+    public BookLinkedList() {
+    }
+
+    Book nhapThongTin() {
+        System.out.println("nhập sách: ");
+        sc.nextLine();
+        String sach = sc.nextLine();
         System.out.println("nhâp mã: ");
-       int ma = sc.nextInt();
+        int ma = sc.nextInt();
         System.out.println("nhập số lượng: ");
-       int soluong = sc.nextInt();
+        int soluong = sc.nextInt();
         System.out.println("nhập đơn giá: ");
         double dongia = sc.nextDouble();
         Book book = new Book(sach, ma, dongia, soluong);
         System.out.println("----------------------");
         return book;
     }
-  void add(){
-      Book b = nhapThongTin();
-      if(head==null){
-          head= b;
-          tail = b;
-    }
-    else{
-        tail.next = b;
-        tail = b;
-    }
-  }
-    public void inthongtin(){
-        current  = head;
 
-        if(head == null){
-            System.out.println("danh sách rỗng");
-            return;
-        }System.out.println("danh sách book");
-        while(current!= null){
-            current.inThongTin();
-            current=current.next;
+    void add() {
+        Book b = nhapThongTin();
+        if (head == null) {
+            head = b;
+            tail = b;
+        } else {
+            tail.next = b;
+            tail = b;
         }
     }
-    boolean tim(int Id){
+
+    void inthongtin() {
+        current = head;
+
+        if (head == null) {
+            System.out.println("danh sách rỗng");
+            return;
+        }
+        System.out.println("danh sách book");
+        while (current != null) {
+            current.inThongTin();
+            current = current.next;
+        }
+    }
+
+    boolean tim(int Id) {
         current = head;
         boolean result = false;
-        while(current!= null){
-            if(current.Id.equals(Id)){
+        while (current != null) {
+            if (current.equals(Id)) {
                 result = true;
-                return  result;
+                return result;
 
             }
             current = current.next;
         }
         return result;
     }
-    public void Xoa(int Id){
-        if(true==tim(Id)){
-            if(current==head){
+
+    void Xoa(int Id) {
+        if (true == tim(Id)) {
+            if (current == head) {
                 xoaHead();
-            }
-            else if (current==tail){
+            } else if (current == tail) {
                 xoaTail();
-            }
-            else {
+            } else {
                 xoaGiua();
             }
-        }
-        else{
+        } else {
             System.out.println("Không tìm thấy");
         }
     }
-    void xoaHead(){
-        head=head.next;
+
+    void xoaHead() {
+        head = head.next;
     }
-    void xoaTail(){
+
+    void xoaTail() {
         current = head;
-        while(current!=null){
-            if(current.next==tail){
-                tail=current;
-                tail.next=null;
+        while (current != null) {
+            if (current.next == tail) {
+                tail = current;
+                tail.next = null;
                 return;
             }
-            current=current.next;
+            current = current.next;
         }
     }
-    void xoaGiua(){
+
+    void xoaGiua() {
         timDangTruoc();
-        current=current.next;
-        previous.next=current;
-    }   
-         
-    void timDangTruoc(){
+        current = current.next;
+        previous.next = current;
+    }
+
+    void timDangTruoc() {
         previous = head;
-        while(previous!=null){
-            if(previous.next==current){
+        while (previous != null) {
+            if (previous.next == current) {
                 return;
             }
-            previous=previous.next;
+            previous = previous.next;
         }
     }
+
+    void TimThongTin(int Id) {
+        if (true == tim(Id)) {
+            current.inThongTin();
+        } else {
+            System.out.println("không tìm thấy ");
         }
-        
-
-    
-
+    }
+}

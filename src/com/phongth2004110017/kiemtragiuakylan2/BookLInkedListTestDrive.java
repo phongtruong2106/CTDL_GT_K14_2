@@ -13,6 +13,7 @@ public class BookLInkedListTestDrive {
         System.out.println("1> thêm vào danh sách");
         System.out.println("2> in danh sách");
         System.out.println("3> xoa sách");
+        System.out.println("4> tìm sách");
         String choice = sc.nextLine();
         switch (choice) {
         case "1":
@@ -23,6 +24,9 @@ public class BookLInkedListTestDrive {
             break;
         case "3":
             xoasach();
+            break;
+            case "4":
+            timsach();
             break;
         default: {
             System.out.println("không hợp lệ! nhập lại: ");
@@ -60,10 +64,16 @@ public class BookLInkedListTestDrive {
 
     static void xoasach() {
         System.out.println("nhập tên sách cần xóa: ");
-        String theloai = sc.nextLine();
-        bookLinkedList.Xoa(Id);;
+        int Id = sc.nextInt();
+        bookLinkedList.Xoa(Id);
         ENTERđetieptuc();
         menu();
     }
-
+    static void timsach(){
+        System.out.println("nhập thể loại cần tìm: ");
+        int Id = sc.nextInt();
+        bookLinkedList.TimThongTin(Id);
+        ENTERđetieptuc();
+        menu();
+    }
 }
