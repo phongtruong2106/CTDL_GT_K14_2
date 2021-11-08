@@ -2,8 +2,6 @@ package com.phongth2004110017.kiemtragiuakylan2;
 
 import java.util.Scanner;
 
-import com.phongth2004110017.tuan07.Sach;
-
 public class BookLinkedList {
     Book head;
     Book tail;
@@ -16,7 +14,6 @@ public class BookLinkedList {
 
     Book nhapThongTin() {
         System.out.println("nhập sách: ");
-        sc.nextLine();
         String sach = sc.nextLine();
         System.out.println("nhâp mã: ");
         int ma = sc.nextInt();
