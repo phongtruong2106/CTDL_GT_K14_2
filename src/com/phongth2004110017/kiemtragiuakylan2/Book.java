@@ -9,6 +9,7 @@ public class Book {
     int soluong;
     
     Scanner nhap = new Scanner(System.in);
+    public Book next;
     //hàm tạo
     Book(){}
 

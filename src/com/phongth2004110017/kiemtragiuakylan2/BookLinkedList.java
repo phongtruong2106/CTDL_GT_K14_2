@@ -43,18 +43,72 @@ public class BookLinkedList {
         if(head == null){
             System.out.println("danh sách rỗng");
             return;
-        }else{
-            while(current != null){
-                System.out.println("mã : "+ current.ma);
-                System.out.println("đơn giá " + current.donGia);
-                System.out.println("số lương:" +current.soluong);
-                System.out.println("=====================");
-                current =current.next;
-            }
+        }System.out.println("danh sách book");
+        while(current!= null){
+            current.inThongTin();
+            current=current.next;
         }
     }
-    public void themdau(){
-        nhapThongTin();
+    boolean tim(int Id){
+        current = head;
+        boolean result = false;
+        while(current!= null){
+            if(current.Id.equals(Id)){
+                result = true;
+                return  result;
 
+            }
+            current = current.next;
+        }
+        return result;
     }
-}
+    public void Xoa(int Id){
+        if(true==tim(Id)){
+            if(current==head){
+                xoaHead();
+            }
+            else if (current==tail){
+                xoaTail();
+            }
+            else {
+                xoaGiua();
+            }
+        }
+        else{
+            System.out.println("Không tìm thấy");
+        }
+    }
+    void xoaHead(){
+        head=head.next;
+    }
+    void xoaTail(){
+        current = head;
+        while(current!=null){
+            if(current.next==tail){
+                tail=current;
+                tail.next=null;
+                return;
+            }
+            current=current.next;
+        }
+    }
+    void xoaGiua(){
+        timDangTruoc();
+        current=current.next;
+        previous.next=current;
+    }   
+         
+    void timDangTruoc(){
+        previous = head;
+        while(previous!=null){
+            if(previous.next==current){
+                return;
+            }
+            previous=previous.next;
+        }
+    }
+        }
+        
+
+    
+
