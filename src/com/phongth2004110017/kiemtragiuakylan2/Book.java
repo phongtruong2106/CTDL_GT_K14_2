@@ -22,7 +22,6 @@ public class Book {
 
     void nhapThongtin(){
         System.out.println("nhập sách: ");
-        nhap.nextLine();
         book = nhap.nextLine();
         System.out.println("nhập mã: ");
         Id = nhap.nextInt();
