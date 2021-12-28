@@ -6,6 +6,8 @@ public class QuanLyMeoTestDrive {
     static QuanLyMeo qlmeo = new QuanLyMeo();
     static Scanner bienNhap = new Scanner(System.in);
     public static void main(String[] args) {
+        Meo meo = new Meo("muop", 15, "xam", "duc");
+
         menu();
     }
     static void menu(){
@@ -82,4 +84,5 @@ public class QuanLyMeoTestDrive {
         nhanEnterDeTiepTuc();
         menu();
     }
+
 }

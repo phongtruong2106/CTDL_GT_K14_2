@@ -17,10 +17,13 @@ public class BookLinkedList {
         String sach = sc.nextLine();
         System.out.println("nhâp mã: ");
         int ma = sc.nextInt();
+        sc.nextLine();
         System.out.println("nhập số lượng: ");
         int soluong = sc.nextInt();
+        sc.nextLine();
         System.out.println("nhập đơn giá: ");
         double dongia = sc.nextDouble();
+        sc.nextLine();
         Book book = new Book(sach, ma, dongia, soluong);
         System.out.println("----------------------");
         return book;

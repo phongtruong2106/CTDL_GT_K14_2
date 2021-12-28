@@ -8,20 +8,21 @@ public class QuanLyMeo {
     Meo tail;
     Meo current;
     Meo previous;
-    Scanner bienNhap = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
     Meo dienThongTin(){
         System.out.println("Nhập tên: ");
-        String ten = bienNhap.nextLine();
+        String ten = sc.nextLine();
         System.out.println("Nhập Tuổi: ");
-        int tuoi = bienNhap.nextInt();
+        int tuoi = sc.nextInt();
+        sc.nextLine();
         System.out.println("Màu Sắc: ");
-        bienNhap.nextLine();
-        String mausac = bienNhap.nextLine();
+        String mausac = sc.nextLine();
         System.out.println("Giống: ");
-        String giong = bienNhap.nextLine();
+        String giong = sc.nextLine();
         Meo meo = new Meo(ten, tuoi, mausac, giong);
         return meo;
     }
+
     void add(){
         Meo meo = dienThongTin();
         if(head==null){
