@@ -314,7 +314,7 @@ public class KhoLinkedList {
     }
 
     void swapInfo() {
-        HangHoa hangHoa = new HangHoa();
+        HangHoa hangHoa = new HangHoa( );
         temp = new Node(hangHoa);
         temp.data.loai = save.data.loai;
         temp.data.mahang = save.data.mahang;

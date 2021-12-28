@@ -10,7 +10,7 @@ public class Node {
 
     }
 
-    public Node(HangHoa hangHoa) {
+    public Node(HangHoa hangHoa){
         data = hangHoa;
         next = null;
     }

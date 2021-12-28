@@ -27,7 +27,7 @@ public class Main {
             System.out.println("12> kết thúc(exit)");
             System.out.println(">>> nhập số để lựa chọn chức năng: ");
 
-            System.out.print("Lựa chọn:");
+            System.out.print("Lựa chọn: ");
             key = sc.nextInt();
             switch (key) {
                 case 1:
@@ -56,7 +56,7 @@ public class Main {
                     qlkho.sua(mahang);
                     break;
                 case 6:
-                    System.out.println(">>6: Tìm kiếm ngày trong dách sách.");
+                    System.out.println(">>6: Tìm kiếm ngày trong dách sách");
                     System.out.println("nhập ngay muốn kiếm: ");
                     String ngay = ss.nextLine();
                     qlkho.checkTimTheongay(ngay);
@@ -86,7 +86,7 @@ public class Main {
                     sortgd();
                     break;
                 case 11:
-                    System.out.println("10> thống kê  ");
+                    System.out.println("10> thống kê ");
                     qlkho.commoditysSatistics();
                     break;
                 case 12:

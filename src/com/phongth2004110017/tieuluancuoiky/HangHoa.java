@@ -30,7 +30,7 @@ public class HangHoa {
         ngaynhap = d;
     }
 
-    public void HangHoa(String l, String id, String name, double g, int s, String d) {
+    public void HangHoa(String l, String id, String name, double g, int s, String d){
         loai = l;
         mahang = id;
         tenhanghoa = name;
@@ -40,7 +40,7 @@ public class HangHoa {
     }
 
     /** đổi chuỗi (theo chuẩn ngày Việt Nam) sang ngày java */
-    public static Date chuyenChuoiSangNgay(String chuoiNgay) throws ParseException {
+    public static Date chuyenChuoiSangNgay(String chuoiNgay) throws ParseException{
         // ngày việt nam
         Date date;
         /**
